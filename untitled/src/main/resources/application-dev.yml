@@ -1,0 +1,8 @@
+#spring properties
+spring:
+  #Database
+  datasource:
+    url: jdbc:mysql://${DBHOST:localhhost}:${DBPORT:3306}/db_initial?autoReconnect=true&useSSL=false&createDatabaseIfNotExist=true
+  # DB Migration
+  flyway:
+    locations: classpath:/db/migration/dev
